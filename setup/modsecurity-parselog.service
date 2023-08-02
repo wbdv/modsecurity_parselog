@@ -1,0 +1,18 @@
+[Unit]
+Description=Parse mod_security (modsec_audit.log) logs and insert into database
+After=network.target
+#StartLimitIntervalSec=0
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=root
+ExecStart=/usr/local/modsecurity-parselog/modsec-parser.sh
+ExecStartPost=/bin/sh -c 'umask 022; pgrep modsec-parser > /var/run/modsecurity-parselog.pid'
+
+#PIDFile=/var/run/modsecurity-parselog.pid
+StandardOutput=journal+console
+StandardError=journal+console
+
+[Install]
+WantedBy=multi-user.target
