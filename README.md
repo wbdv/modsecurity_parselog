@@ -23,10 +23,11 @@ mkdir /usr/local/modsecurity-parselog/
 cd /usr/local/modsecurity-parselog/
 wget -O modsecurity-parselog.tgz https://github.com/wbdv/modsecurity_parselog/archive/refs/tags/v0.1-beta.tar.gz
 tar xzf modsecurity-parselog.tgz
+chmod +x modsec-parser.sh
 cp setup/modsecurity-parselog.service /etc/systemd/system/modsecurity-parselog.service 
 systemctl daemon-reload
 mysql -e 'CREATE DATABASE modsec';
-mysql -e 'GRANT ALL ON modsec.* TO modsec@localhost IDENTIFIED BY ""';
+mysql -e 'GRANT ALL ON modsec.* TO modsec@localhost IDENTIFIED BY "[..]"';
 mysql modsec < setup/modsec.sql 
 vi defines.php
 
