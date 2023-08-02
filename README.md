@@ -19,8 +19,8 @@ Tested on CentOS 7
 ````
 mkdir /usr/local/modsecurity-parselog/
 cd /usr/local/modsecurity-parselog/
-wget ...
-tar xzf
+wget https://github.com/wbdv/modsecurity_parselog/releases/download/untagged-1440723f2d2b8d2b838d/modsecurity-parselog.tgz
+tar xzf modsecurity-parselog.tgz
 cp setup/modsecurity-parselog.service /etc/systemd/system/modsecurity-parselog.service 
 systemctl daemon-reload
 mysql -e 'CREATE DATABASE modsec';
