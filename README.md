@@ -10,6 +10,7 @@
 
 **Install**
 
+````
 mkdir /usr/local/modsecurity-parselog/
 cd /usr/local/modsecurity-parselog/
 wget 
@@ -22,3 +23,4 @@ mysql modsec < setup/modsec.sql
 vi defines.php
 
 systemctl enable --now modsecurity-parselog.service
+````
