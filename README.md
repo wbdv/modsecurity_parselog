@@ -21,7 +21,7 @@ Tested on CentOS 7
 ````
 mkdir /usr/local/modsecurity-parselog/
 cd /usr/local/modsecurity-parselog/
-wget https://github.com/wbdv/modsecurity_parselog/archive/refs/tags/v0.1-beta.tar.gz
+wget -O modsecurity-parselog.tgz https://github.com/wbdv/modsecurity_parselog/archive/refs/tags/v0.1-beta.tar.gz
 tar xzf modsecurity-parselog.tgz
 cp setup/modsecurity-parselog.service /etc/systemd/system/modsecurity-parselog.service 
 systemctl daemon-reload
