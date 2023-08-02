@@ -8,13 +8,13 @@ A simple service that parse modsecurity logs (modsec_audit.log) and insert few d
   ````
   load_module modules/ngx_http_modsecurity_module.so;
   ````
-  log to /var/log/modsec_audit.log
+- log to /var/log/modsec_audit.log
 
-- /usr/share/GeoIP/GeoLite2-Country.mmdb 
+- /usr/share/GeoIP/GeoLite2-Country.mmdb (get it from https://dev.maxmind.com/geoip/geolite2-free-geolocation-data )
 
-- php with php-maxminddb 
+- php with php-maxminddb (yum install php-maxminddb)
 
-Tested on CentOS 7
+_Tested on CentOS 7_
 
 **Install**
 
